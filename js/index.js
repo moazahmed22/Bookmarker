@@ -58,12 +58,12 @@ function showTable(array) {
                                 <th scope="row">${index + 1}</th>
                                     <td>${element.websiteName}</td>
                                     <td>
-                                        <a href="https://google.com" class="btn btn-success">
+                                        <a href=${element.websiteURL} class="btn btn-success">
                                             <i class="fa-solid fa-eye me-2"></i> visit
                                         </a>
                                     </td>
                                 <td><button class="btn btn-danger deleteBookmarkBtn" onclick="deleteBookmark(${index})">
-                                        <i class="fa-solid fa-trash me-2"></i> visit
+                                        <i class="fa-solid fa-trash me-2"></i> delete
                                     </button></td>
                             </tr>`;
   });
