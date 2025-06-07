@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Bookmarker</title>
+  </head>
+  <body class="p-5">
+    <div class="container text-center">
+      <h1 class="d-inline-block position-relative main-title">Bookmarker</h1>
+      <div
+        class="bookmark-section container d-flex flex-column mt-5 py-4 border border-black"
+      >
+        <div class="bookmark-title d-inline mb-5">
+          <i class="fa-solid fa-bookmark fs-5"></i>
+          <h2 class="d-inline">Bookmark your favorite sites</h2>
+          <i class="fa-solid fa-bookmark fs-5"></i>
+        </div>
+
+        <div class="form-floating mb-5 mt-3 d-flex position-relative">
+          <input
+            type="email"
+            class="form-control"
+            id="siteName"
+            placeholder="name@example.com"
+          />
+          <label for="floatingInput" class="text-capitalize fw-bold"
+            ><i class="fa-solid fa-book-bookmark me-2"></i>site name</label
+          >
+          <i
+            class="fa-solid input-icon fa-circle-exclamation d-none end-0 pe-3 text-danger position-absolute top-50 translate-middle-y"
+          ></i>
+        </div>
+
+        <div class="form-floating mb-4">
+          <input
+            type="email"
+            class="form-control"
+            id="siteURL"
+            placeholder="name@example.com"
+          />
+          <label for="floatingInput" class="text-capitalize fw-bold"
+            ><i class="fa-solid fa-link me-2"></i>site URL</label
+          >
+          <i
+            class="fa-solid input-icon fa-circle-exclamation d-none end-0 pe-3 text-danger position-absolute top-50 translate-middle-y"
+          ></i>
+        </div>
+        <button
+          class="btn btn-success m-auto px-5 text-capitalize"
+          id="submitBtn"
+        >
+          submit
+        </button>
+      </div>
+      <table class="table mt-4">
+        <thead>
+          <tr>
+            <th scope="col" class="text-capitalize">index</th>
+            <th scope="col" class="text-capitalize">website name</th>
+            <th scope="col" class="text-capitalize">visit</th>
+            <th scope="col" class="text-capitalize">delete</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <div class="light-box w-100 vh-100 position-absolute start-0 top-0 d-none">
+      <div class="main-box d-flex flex-column gap-4 rounded">
+        <div class="button-container d-flex justify-content-between fs-5">
+          <div class="left d-flex justify-content-around gap-2">
+            <i class="fa-solid fa-circle text-danger"></i>
+            <i class="fa-solid fa-circle text-warning"></i>
+            <i class="fa-solid fa-circle text-success"></i>
+          </div>
+          <div class="right">
+            <i id="closeBtn" class="fa-solid fa-xmark"></i>
+          </div>
+        </div>
+        <p class="warning-title fs-5 lh-base m-0">
+          Site Name or Url is not valid, Please follow the rules below :
+        </p>
+        <div class="d-flex flex-column gap-4 error-messages">
+          <div class="error-msg">
+            <i class="fa-solid fa-circle-right text-danger me-1"></i>
+            <p class="d-inline-block m-0">
+              Site name must contain at least 3 characters
+            </p>
+          </div>
+          <div class="error-msg">
+            <i class="fa-solid fa-circle-right text-danger me-1"></i>
+            <p class="d-inline-block m-0">Site URL must be a valid one</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/f636981cc6.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
