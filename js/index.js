@@ -98,7 +98,7 @@ function checkInputValidation(event) {
   }
   switch (event.target.id) {
     case "siteName":
-      regex = /^[A-Za-z]{3,255}$/;
+      regex = /^[a-zA-Z0-9]*$/;
       isValid = regex.test(event.target.value) ? true : false;
       break;
     case "siteURL":
