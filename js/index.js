@@ -40,6 +40,11 @@ function addBookmark() {
     websiteName: siteName.value,
     websiteURL: siteURL.value,
   };
+  //  URL manipulation
+  if (!bookmarkObj.websiteURL.startsWith("http")) {
+    bookmarkObj.websiteURL = "https://" + bookmarkObj.websiteURL;
+  }
+
   // check if all inputs are valid (using the validationIcons)
   if (validationIcons.every((icon) => icon.classList.contains("fa-check"))) {
     bookmarks.push(bookmarkObj);
@@ -58,7 +63,9 @@ function showTable(array) {
                                 <th scope="row">${index + 1}</th>
                                     <td>${element.websiteName}</td>
                                     <td>
-                                        <a href=${element.websiteURL} class="btn btn-success">
+                                        <a href=${
+                                          element.websiteURL
+                                        } class="btn btn-success">
                                             <i class="fa-solid fa-eye me-2"></i> visit
                                         </a>
                                     </td>
