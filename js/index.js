@@ -63,9 +63,9 @@ function showTable(array) {
                                 <th scope="row">${index + 1}</th>
                                     <td>${element.websiteName}</td>
                                     <td>
-                                        <a href=${
+                                        <a href="${
                                           element.websiteURL
-                                        } class="btn btn-success">
+                                        }" class="btn btn-success">
                                             <i class="fa-solid fa-eye me-2"></i> visit
                                         </a>
                                     </td>
@@ -104,6 +104,7 @@ function checkInputValidation(event) {
     case "siteURL":
       regex =
         /^(https?:\/\/)?(www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z]{2,63}(\/[-a-zA-Z0-9@:%_+.~#?&\/\/=]*)?$/;
+        // /^(https?:\/\/)?(www\.)?[a-zA-Z0-9-]{2,}(\.[a-zA-Z]{2,})+(\/[^\s]*)?$/;
       isValid = regex.test(event.target.value) ? true : false;
       break;
   }
